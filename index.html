@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design System</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <button class="drawer-close" id="drawerClose" type="button" aria-label="메뉴 닫기"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <a class="site-logo" href="#/overview" data-slot="site-logo"><img src="assets/site-logo.svg" alt="Logo"></a>
+    <nav class="side-nav">
+      <a class="side-link" href="#/overview" data-route="overview">Overview</a>
+
+      <div class="side-group" data-group="brand">
+        <button class="side-link" data-toggle="brand">Brand
+          <svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6l4 4 4-4"/></svg></button>
+        <div class="side-sub">
+          <a href="#/brand/keyword">Keyword</a>
+          <a href="#/brand/logo">Logo</a>
+          <a href="#/brand/color">Color</a>
+        </div>
+      </div>
+
+      <div class="side-group" data-group="foundations">
+        <button class="side-link" data-toggle="foundations">Foundations
+          <svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6l4 4 4-4"/></svg></button>
+        <div class="side-sub">
+          <a href="#/foundations/typography">Typography</a>
+          <a href="#/foundations/spacing">Spacing</a>
+        </div>
+      </div>
+
+      <div class="side-group" data-group="components">
+        <button class="side-link" data-toggle="components">Components <svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6l4 4 4-4"/></svg></button>
+        <div class="side-sub">
+          <div class="sub-group" data-sub="pc">
+            <button class="sub-toggle" data-subtoggle="pc">PC <svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6l4 4 4-4"/></svg></button>
+            <div class="sub-links">
+              <a href="#/components/pc/button">Button</a>
+              <a href="#/components/pc/input">Input</a>
+            </div>
+          </div>
+          <div class="sub-group" data-sub="mo">
+            <button class="sub-toggle" data-subtoggle="mo">MO <svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6l4 4 4-4"/></svg></button>
+            <div class="sub-links">
+              <a href="#/components/mo/button">Button</a>
+              <a href="#/components/mo/input">Input</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </aside>
+
+  <header class="topbar">
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="메뉴 열기"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <span class="topbar-title" id="topbarTitle">Overview</span>
+  </header>
+  <div class="backdrop" id="backdrop"></div>
+
+  <!-- ===== PANEL ===== -->
+  <div class="panel">
+
+    <!-- OVERVIEW (HOME) -->
+    <main class="content" data-page="overview">
+      <div class="home-hero" data-slot="home-hero"><img src="assets/hero.svg" alt=""></div>
+      <h1 class="home-title" id="homeTitle">맞춤형 서비스로 완성하는<br>내 통신 생활의 모든 것</h1>
+      <p class="home-desc" id="homeDesc">디자인 시스템 소개 문구를 입력하세요.<br>목적과 원칙, 기대 효과를 두 줄로 요약해 주세요.</p>
+
+      <div class="home-cards">
+        <a class="home-card soon link" href="#/brand">
+          <svg class="ico" viewBox="0 0 28 28"><path d="M14 3l4 7h-8z"/><rect x="4" y="16" width="7" height="7" rx="1.5"/><circle cx="20" cy="19.5" r="3.5"/></svg>
+          <div class="row"><span class="l">Brand <span class="badge">준비 중</span></span><svg class="arrow" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div></a>
+        <a class="home-card soon link" href="#/foundations">
+          <svg class="ico" viewBox="0 0 28 28"><path d="M14 4l10 5-10 5-10-5z"/><path d="M4 14l10 5 10-5"/><path d="M4 19l10 5 10-5"/></svg>
+          <div class="row"><span class="l">Foundations <span class="badge">준비 중</span></span><svg class="arrow" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div></a>
+        <a class="home-card soon link" href="#/components">
+          <svg class="ico" viewBox="0 0 28 28"><rect x="11" y="3" width="6" height="6" rx="1" transform="rotate(45 14 6)"/><rect x="11" y="19" width="6" height="6" rx="1" transform="rotate(45 14 22)"/><rect x="3" y="11" width="6" height="6" rx="1" transform="rotate(45 6 14)"/><rect x="19" y="11" width="6" height="6" rx="1" transform="rotate(45 22 14)"/></svg>
+          <div class="row"><span class="l">Components <span class="badge">준비 중</span></span><svg class="arrow" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div></a>
+        <div class="home-card soon">
+          <svg class="ico" viewBox="0 0 28 28"><rect x="4" y="5" width="20" height="10" rx="2"/><path d="M4 20h12M4 24h8"/></svg>
+          <div class="row"><span class="l">UX Writing <span class="badge">준비 중</span></span><svg class="arrow" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
+        </div>
+      </div>
+    
+      <section class="home-section">
+        <h2>Design Principles</h2>
+        <div class="pr-grid">
+          <div><div class="pr-img" data-slot="pr-1"><img src="assets/ph-square.svg" alt=""></div><p class="pr-label">원칙 라벨 01</p><p class="pr-text">원칙 설명을 입력하세요.<br>두 줄까지 어울려요.</p></div>
+          <div><div class="pr-img" data-slot="pr-2"><img src="assets/ph-square.svg" alt=""></div><p class="pr-label">원칙 라벨 02</p><p class="pr-text">원칙 설명을 입력하세요.<br>두 줄까지 어울려요.</p></div>
+          <div><div class="pr-img" data-slot="pr-3"><img src="assets/ph-square.svg" alt=""></div><p class="pr-label">원칙 라벨 03</p><p class="pr-text">원칙 설명을 입력하세요.<br>두 줄까지 어울려요.</p></div>
+        </div>
+      </section>
+
+      <footer class="home-footer">
+        <div class="credits"><h4>Designers</h4><p class="role">Role</p><p class="names">이름 | 이름 | 이름</p></div>
+        <div class="contact"><a href="#">Contact Us</a><span>© Your Company</span></div>
+      </footer>
+    </main>
+
+    <!-- BRAND -->
+    <main class="content" data-page="brand" hidden>
+      <div class="page-head"><h1>Brand</h1><p>브랜드 정체성을 시각적으로 전달하고, 모든 접점에서 일관된 메시지를 유지하기 위한 기준입니다.</p></div>
+
+      <section class="section" id="brand-keyword">
+        <h2>Keyword</h2><p class="desc">브랜드가 지향하는 핵심 가치입니다.</p>
+        <div class="section-body keyword-grid">
+          <article class="keyword-card"><div class="img" data-slot="keyword-1"><img src="assets/keyword-1.svg" alt=""></div><div class="txt"><h3>Keyword 01</h3><p>키워드 설명을 입력하세요.</p></div></article>
+          <article class="keyword-card"><div class="img" data-slot="keyword-2"><img src="assets/keyword-2.svg" alt=""></div><div class="txt"><h3>Keyword 02</h3><p>키워드 설명을 입력하세요.</p></div></article>
+          <article class="keyword-card"><div class="img" data-slot="keyword-3"><img src="assets/keyword-3.svg" alt=""></div><div class="txt"><h3>Keyword 03</h3><p>키워드 설명을 입력하세요.</p></div></article>
+        </div>
+      </section>
+
+      <section class="section" id="brand-logo">
+        <h2>Logo</h2><p class="desc">로고 사용 기준입니다.</p>
+        <div class="section-body">
+          <div class="logo-grid">
+            <figure><div class="logo-box" data-slot="logo-primary"><img src="assets/logo-primary.svg" alt=""></div><figcaption class="logo-caption">Primary Logo</figcaption></figure>
+            <figure><div class="logo-box dark" data-slot="logo-symbol"><img src="assets/logo-symbol.svg" alt=""></div><figcaption class="logo-caption">Symbol (Dark)</figcaption></figure>
+          </div>
+          <div class="rule-grid">
+            <div><h4>최소 여백</h4><p>로고 주변에는 심볼 높이의 1/2 이상 여백을 확보합니다.</p></div>
+            <div><h4>사용 금지</h4><p>비율 변경, 임의 색상 변경, 효과 추가는 허용하지 않습니다.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="brand-color">
+        <h2>Color</h2><p class="desc">카드를 클릭하면 HEX 값이 복사됩니다.</p>
+        <div class="section-body color-grid" id="colorGrid"></div>
+      </section>
+      <div class="footer"><span>© Your Company</span><a href="#/overview">Overview</a></div>
+    </main>
+
+    <!-- FOUNDATIONS -->
+    <main class="content" data-page="foundations" hidden>
+      <div class="page-head"><h1>Foundations</h1><p>타이포그래피, 스페이싱 등 디자인의 기본 토큰입니다.</p></div>
+      <section class="section" id="foundations-typography">
+        <h2>Typography</h2>
+        <div class="section-body rule-grid" style="grid-template-columns:1fr;margin-top:var(--section-title-gap)">
+          <div><p style="font-size:40px;font-weight:700">Heading 40 / Bold</p></div>
+          <div><p style="font-size:24px;font-weight:600;color:var(--text)">Title 24 / Semibold</p></div>
+          <div><p style="font-size:16px;color:var(--text)">Body 16 / Regular — 본문 텍스트 예시입니다.</p></div>
+        </div>
+      </section>
+      <section class="section" id="foundations-spacing">
+        <h2>Spacing</h2>
+        <div class="section-body" id="spacingDemo"></div>
+      </section>
+    </main>
+
+    <!-- COMPONENTS -->
+    <main class="content" data-page="components" hidden>
+      <div class="page-head"><h1>Components</h1><p>PC와 모바일, 두 벌의 컴포넌트를 각각 제공합니다.</p></div>
+      <div class="home-cards" style="margin-top:72px">
+        <a class="home-card" href="#/components/pc">
+          <svg class="ico" viewBox="0 0 28 28"><rect x="3" y="5" width="22" height="14" rx="2"/><path d="M9 24h10M14 19v5"/></svg>
+          <div class="row"><span>PC</span><svg class="arrow" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
+        </a>
+        <a class="home-card" href="#/components/mo">
+          <svg class="ico" viewBox="0 0 28 28"><rect x="8" y="3" width="12" height="22" rx="3"/><path d="M12.5 21h3"/></svg>
+          <div class="row"><span>MO</span><svg class="arrow" viewBox="0 0 20 20"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
+        </a>
+      </div>
+    </main>
+
+    <main class="content" data-page="components-pc" hidden>
+      <div class="page-head"><h1>Components<span class="badge-plat">PC</span></h1><p>데스크톱 웹 기준 컴포넌트입니다. 마우스 호버와 촘촘한 밀도를 전제로 해요.</p></div>
+
+      <section class="section" id="components-pc-button">
+        <h2>Button</h2><p class="desc">크기 3종과 상태 4종입니다.</p>
+        <div class="section-body">
+          <div class="comp-stage">
+            <div class="demo-row">
+              <button class="btn btn-primary lg" data-size="Large">Large</button>
+              <button class="btn btn-primary" data-size="Medium">Medium</button>
+              <button class="btn btn-primary sm" data-size="Small">Small</button>
+            </div>
+            <div class="demo-row">
+              <button class="btn btn-primary">Primary</button>
+              <button class="btn btn-secondary">Secondary</button>
+              <button class="btn btn-ghost">Ghost</button>
+              <button class="btn btn-primary" disabled>Disabled</button>
+            </div>
+          </div>
+          <div class="spec" data-spec="button"></div>
+        </div>
+      </section>
+
+      <section class="section" id="components-pc-input">
+        <h2>Input</h2><p class="desc">기본, 포커스, 에러 상태입니다.</p>
+        <div class="section-body">
+          <div class="comp-stage">
+            <label class="field"><span>이메일</span><input class="input" data-spec-input placeholder="example@email.com"><small>도움말 텍스트</small></label>
+            <label class="field err"><span>비밀번호</span><input class="input" value="1234"><small>8자 이상 입력해 주세요.</small></label>
+          </div>
+          <div class="spec" data-spec="input"></div>
+        </div>
+      </section>
+      <div class="footer"><span>© Your Company</span><a href="#/components">Components</a></div>
+    </main>
+
+    <main class="content" data-page="components-mo" hidden>
+      <div class="page-head"><h1>Components<span class="badge-plat">MO</span></h1><p>모바일 기준 컴포넌트입니다. 터치 영역을 넉넉히 확보한 크기예요.</p></div>
+
+      <section class="section" id="components-mo-button">
+        <h2>Button</h2><p class="desc">크기 3종과 상태 4종입니다.</p>
+        <div class="section-body">
+          <div class="comp-stage">
+            <div class="demo-row">
+              <button class="btn btn-primary lg" data-size="Large">Large</button>
+              <button class="btn btn-primary" data-size="Medium">Medium</button>
+              <button class="btn btn-primary sm" data-size="Small">Small</button>
+            </div>
+            <div class="demo-row">
+              <button class="btn btn-primary">Primary</button>
+              <button class="btn btn-secondary">Secondary</button>
+              <button class="btn btn-ghost">Ghost</button>
+              <button class="btn btn-primary" disabled>Disabled</button>
+            </div>
+          </div>
+          <div class="spec" data-spec="button"></div>
+        </div>
+      </section>
+
+      <section class="section" id="components-mo-input">
+        <h2>Input</h2><p class="desc">기본, 포커스, 에러 상태입니다.</p>
+        <div class="section-body">
+          <div class="comp-stage">
+            <label class="field"><span>이메일</span><input class="input" data-spec-input placeholder="example@email.com"><small>도움말 텍스트</small></label>
+            <label class="field err"><span>비밀번호</span><input class="input" value="1234"><small>8자 이상 입력해 주세요.</small></label>
+          </div>
+          <div class="spec" data-spec="input"></div>
+        </div>
+      </section>
+      <div class="footer"><span>© Your Company</span><a href="#/components">Components</a></div>
+    </main>
+
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

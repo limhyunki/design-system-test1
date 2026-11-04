@@ -1,0 +1,80 @@
+/* ===== 여백 / 타이포 / 컬러 토큰: 여기만 고치면 전체에 반영돼요 ===== */
+:root {
+  /* layout */
+  --sidebar-w: 280px;
+  --panel-inset: 10px;          /* 화면 가장자리 → 흰 패널 */
+  --panel-radius: 28px;
+  --content-max: 1000px;        /* 본문 폭 */
+  --content-top: 110px;         /* 패널 상단 → 첫 요소 */
+  --content-bottom: 80px;
+
+  /* spacing */
+  --section-gap: 120px;
+  --section-title-gap: 40px;
+  --grid-gap: 12px;             /* 홈 카드 사이 */
+  --card-gap: 24px;             /* 일반 카드 사이 */
+  --card-padding: 24px;
+  --radius: 20px;
+
+  /* home */
+  --hero-height: 312px;
+  --hero-radius: 24px;
+  --hero-to-title: 80px;
+  --title-to-desc: 28px;
+  --desc-to-cards: 80px;
+  --home-card-height: 178px;
+
+  /* image sizes */
+  --keyword-img-ratio: 4 / 3;
+  --logo-box-height: 320px;
+  --site-logo-size: 42px;
+
+  /* color */
+  --bg-from: #eaf1fd;
+  --bg-to: #dde7f5;
+  --bg: #ffffff;
+  --surface: #f6f7f9;
+  --text: #25262b;
+  --text-sub: #6b7280;
+  --line: #e8eaee;
+  --brand: #2563eb;
+
+  /* type */
+  --font: "Pretendard", -apple-system, "Apple SD Gothic Neo", sans-serif;
+  --fs-hero: 56px;
+  --fs-h2: 28px;
+  --fs-body: 16px;
+  --fs-nav: 16px;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --sidebar-w: 0px;
+    --panel-inset: 10px;
+    --panel-radius: 28px;
+    --content-top: 22px;
+    --content-bottom: 56px;
+    --section-gap: 72px;
+    --hero-height: 220px;
+    --hero-radius: 20px;
+    --hero-to-title: 56px;
+    --title-to-desc: 20px;
+    --desc-to-cards: 48px;
+    --home-card-height: 128px;
+    --fs-hero: clamp(30px, 6.4vw, 46px);
+  }
+}
+
+/* ===== 컴포넌트 스펙: PC / MO 각각 독립 ===== */
+:root, [data-page="components-pc"] {
+  --btn-lg: 48px; --btn-md: 40px; --btn-sm: 32px;
+  --btn-radius: 8px; --btn-fs: 15px; --btn-px: 24px;
+  --input-h: 44px; --input-radius: 8px; --input-fs: 15px;
+  --stage-w: 100%; --stage-radius: 20px;
+}
+[data-page="components-mo"] {
+  --btn-lg: 56px; --btn-md: 48px; --btn-sm: 40px;
+  --btn-radius: 12px; --btn-fs: 16px; --btn-px: 20px;
+  --input-h: 52px; --input-radius: 12px; --input-fs: 16px;
+  --stage-w: 360px; --stage-radius: 32px;
+}
