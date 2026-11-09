@@ -192,3 +192,30 @@ body.edit [data-slot] { outline: 2px dashed var(--brand); outline-offset: 2px; c
   .home-card { padding: 18px; }
   .home-card .row { font-size: 16px; }
 }
+
+/* ---------- 작은 화면 보정 (360px 대응) ---------- */
+body { word-break: keep-all; overflow-wrap: break-word; }
+/* 그리드 아이템이 내용 때문에 열을 밀어내지 않도록 */
+.home-cards > *, .keyword-grid > *, .logo-grid > *, .rule-grid > *, .color-grid > *, .pr-grid > * { min-width: 0; }
+.home-card .row { min-width: 0; gap: 8px; }
+.home-card .row .l { flex-wrap: wrap; gap: 4px 8px; min-width: 0; }
+.home-card .arrow { flex: none; }
+.badge { white-space: nowrap; }
+.spec { overflow-x: auto; }
+.spec table { min-width: 0; }
+.logo-box img { max-width: 100%; }
+@media (max-width: 900px) {
+  .home-desc { font-size: 15px; }
+}
+@media (max-width: 480px) {
+  .content { padding-left: 16px; padding-right: 16px; }
+  .home-hero { --hero-radius: 16px; }
+  .home-cards { gap: 8px; }
+  .home-card { padding: 16px; border-radius: 14px; }
+  .home-card .row { font-size: 15px; }
+  .home-card .ico { width: 24px; height: 24px; }
+  .page-head h1 { font-size: 32px; }
+  .comp-stage { padding: 28px 16px; }
+  .spec th, .spec td { padding: 10px 12px; }
+}
+.comp-stage .btn-secondary { background: #fff; border-color: var(--line); }
