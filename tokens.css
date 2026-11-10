@@ -17,7 +17,8 @@
   --radius: 20px;
 
   /* home */
-  --hero-height: 312px;
+  --hero-ratio: auto;           /* auto = 이미지 원본 비율 그대로(잘림 없음). 고정하려면 2 / 1 처럼 입력 (이 경우 잘릴 수 있어요) */
+  --hero-pos: center;           /* 비율을 고정해서 잘릴 때 남길 위치 (center / top / bottom / center 40%) */
   --hero-radius: 24px;
   --hero-to-title: 80px;
   --title-to-desc: 28px;
@@ -55,8 +56,9 @@
     --content-top: 22px;
     --content-bottom: 56px;
     --section-gap: 72px;
-    --hero-height: 220px;
     --hero-radius: 20px;
+    --hero-ratio: auto;           /* 모바일은 이미지 전체가 보이도록 원본 비율 */
+    --hero-pos: center;
     --hero-to-title: 56px;
     --title-to-desc: 20px;
     --desc-to-cards: 48px;

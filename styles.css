@@ -29,8 +29,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .content { max-width: var(--content-max); margin: 0 auto; padding: var(--content-top) 24px var(--content-bottom); }
 
 /* ---------- home ---------- */
-.home-hero { height: var(--hero-height); border-radius: var(--hero-radius); overflow: hidden; background: #e3edfc; }
-.home-hero img { width: 100%; height: 100%; object-fit: cover; }
+.home-hero { aspect-ratio: var(--hero-ratio); border-radius: var(--hero-radius); overflow: hidden; background: #e3edfc; }
+.home-hero img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: var(--hero-pos); }
 .home-title { margin-top: var(--hero-to-title); text-align: center; font-size: var(--fs-hero); line-height: 1.25; letter-spacing: -0.03em; font-weight: 800; }
 .home-desc { margin-top: var(--title-to-desc); text-align: center; color: #4b5563; font-size: 16px; line-height: 1.9; }
 .home-cards { margin-top: var(--desc-to-cards); display: grid; grid-template-columns: 1fr 1fr; gap: var(--grid-gap); }
