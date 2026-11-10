@@ -19,6 +19,7 @@
   /* home */
   --hero-ratio: auto;           /* auto = 이미지 원본 비율 그대로(잘림 없음). 고정하려면 2 / 1 처럼 입력 (이 경우 잘릴 수 있어요) */
   --hero-pos: center;           /* 비율을 고정해서 잘릴 때 남길 위치 (center / top / bottom / center 40%) */
+  --hero-max-w: 800px;          /* 메인 이미지 최대 가로 폭. 줄이면 세로도 같이 줄어요 (잘림 없음). 본문 폭 전체는 none */
   --hero-radius: 24px;
   --hero-to-title: 80px;
   --title-to-desc: 28px;
@@ -57,6 +58,7 @@
     --content-bottom: 56px;
     --section-gap: 72px;
     --hero-radius: 20px;
+    --hero-max-w: none;
     --hero-ratio: auto;           /* 모바일은 이미지 전체가 보이도록 원본 비율 */
     --hero-pos: center;
     --hero-to-title: 56px;
